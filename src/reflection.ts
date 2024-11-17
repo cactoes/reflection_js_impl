@@ -118,7 +118,7 @@ let g_library: {
     destroy_browser: ffi.ForeignFunction<void, [ ref.Pointer<unknown> ]>;
 };
 
-export function init_reflection(lib_path: string): void {
+export function init_reflection(lib_path: string = path.join(__dirname, "../reflection/lib")): void {
     g_library = ffi.Library(path.join(lib_path, "reflection_core_c_api"), {
         "destroy_string": [ "void", [ ref.refType(unsafe_string_t) ] ],
         "destroy_array": [ "void", [ ref.refType(unsafe_int_array_t) ] ],

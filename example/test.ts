@@ -33,7 +33,7 @@ function start_message_loop() {
 }
 
 function main(argv: string[], argc: number): number {
-    reflection.init_reflection(path.join(__dirname, "../reflection/lib/"));
+    reflection.init_reflection();
 
     const window = new reflection.browser_window({
         width: 600,

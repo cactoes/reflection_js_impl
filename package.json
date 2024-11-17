@@ -1,6 +1,6 @@
 {
     "name": "reflection_ui",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "build/reflection.js",
     "scripts": {
         "build": "tsc --build"
