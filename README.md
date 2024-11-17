@@ -8,7 +8,7 @@ PS> npm install reflection_ui
 
 ## Usage
 [!] Important, this library does not take care of the windows message loop <br>
-you will have to do that yourself, see [example](./example/example.ts#L8)
+you will have to do that yourself, see [example](./example/example.ts#L6)
 
 ### Initialization
 Make sure before calling any other reflection function that init_reflection() has been called
