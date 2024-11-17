@@ -1,9 +1,7 @@
-import * as path from "path";
 import * as ffi from "ffi-napi";
 import * as ref from "ref-napi";
 import * as struct from "ref-struct-napi";
-
-import * as reflection from "../src/reflection";
+import * as reflection from "reflection_ui";
 
 function start_message_loop() {
     const MSG = struct({
@@ -38,7 +36,7 @@ function main(argv: string[], argc: number): number {
     const window = new reflection.browser_window({
         width: 600,
         height: 700,
-        name: "test window"
+        name: "example window"
     }, {
         is_tab_list: false,
         outline: true,
@@ -53,11 +51,9 @@ function main(argv: string[], argc: number): number {
         console.log("render finished");
     });
 
-    const list = window.get_frame().add_list("sel", [ "item" ], (h, i) => {
-        console.log(h, i);
-
-        list!.set_items([ "item1", "item2", `${i}` ]);
-    });
+    const list = window.get_frame().add_button("button", (handle) => {
+        console.log("clicked\n");
+    }, { disabled: false, full_width: false });
 
     window.start();
 
