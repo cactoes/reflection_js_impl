@@ -1,5 +1,5 @@
 {
-    "name": "reflection-ui",
+    "name": "reflection_ui",
     "version": "1.0.0",
     "main": "build/reflection.js",
     "scripts": {
