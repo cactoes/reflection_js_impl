@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "lib": ["ESNext", "DOM"],
+        "target": "ESNext",
+        "module": "commonjs",
+        "moduleDetection": "force",
+        "allowJs": true,
+
+        // Bundler mode
+        // "moduleResolution": "bundler",
+        // "allowImportingTsExtensions": true,
+        // "verbatimModuleSyntax": true,
+        // "noEmit": true,
+
+        // Best practices
+        "strict": true,
+        "skipLibCheck": true,
+        // "noFallthroughCasesInSwitch": true,
+
+        // Some stricter flags (disabled by default)
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "noPropertyAccessFromIndexSignature": false,
+
+        "rootDir": "./src",
+        "outDir": "./build",
+
+        // Ensures that TypeScript generates .d.ts files
+        "declaration": true,
+        "declarationDir": "./build",
+    },
+    "include": [
+        "src/**/*",
+    ]
+}
